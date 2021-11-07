@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+:root {
+  --text-color: #124a63;
+  --text-color-secondary: #b3c5cd;
+
+  --background-color: #f9f9f9;
+  --background-color-secondary: white;
+
+  --font-family: "Poppins", "sans-serif";
+  --box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+[data-theme="dark"] {
+  --text-color: #f0f0f0;
+  --text-color-secondary: #b3c5cd;
+
+  --background-color: #252329;
+  --background-color-secondary: #120f13;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+[data-theme="purple"] {
+  --text-color: #ebd5d5;
+  --text-color-secondary: #4b95b4;
+
+  --background-color: #524174;
+  --background-color-secondary: #af39d6;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+[data-theme="brown"] {
+  --text-color: #ecd0e5;
+  --text-color-secondary: #c58fad;
+
+  --background-color: #503345;
+  --background-color-secondary: #bd3b8a;
+}
+
+[data-theme="yalow"] {
+  --text-color: #ececd0;
+  --text-color-secondary: #c0c58f;
+
+  --background-color: #504e33;
+  --background-color-secondary: #b0b121;
+}
+
+[data-theme="blue"] {
+  --text-color: #d0ecec;
+  --text-color-secondary: #8fc5c5;
+
+  --background-color: #334a50;
+  --background-color-secondary: #3ba7bd;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.picker-color {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.picker-color > button {
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+
+.mainBox {
+  width: 80%;
+  height: 300px;
+  background-color: var(--background-color-secondary);
+}
+
+.title {
+  text-align: center;
+  color: var(--text-color);
+  font-family: cursive;
+  font-size: 45px;
+}
+
+.subTitle {
+  text-align: center;
+  color: var(--text-color-secondary);
+  font-family: monospace;
+  font-size: 24px;
 }
